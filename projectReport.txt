@@ -1,0 +1,11 @@
+### Results and Interpretation
+
+K-Means clustering was applied to 253,680 records from the BRFSS 2015 diabetes health indicators dataset using 15 selected health-related features. The `Diabetes_012` variable was excluded from clustering and used only for post-clustering analysis.
+
+A five-cluster solution was selected provisionally after examining the elbow curve and silhouette scores. Cluster profiling revealed distinct patterns in reported blood pressure, cholesterol, BMI, smoking, physical activity, and health limitations.
+
+The diabetes-category distribution varied across clusters. Cluster 0 had the highest proportion of respondents in category 2 (34.76%), whereas Cluster 1 had the lowest (5.77%). A chi-square test indicated an association between cluster membership and diabetes category, \(\chi^2(8)=25,684.60\), with a p-value below the numerical precision displayed by the software. Cramér's V was 0.2250, indicating a modest association.
+
+Stability experiments showed that cluster assignments varied across different random initializations, although some runs converged to the same solution. Therefore, the discovered groups should be interpreted as exploratory patterns rather than definitive natural population segments.
+
+These results do not establish causation, diagnostic accuracy, or clinical utility. Further investigation of cluster stability, feature representation, and preprocessing choices is necessary before making stronger claims.
